@@ -1,12 +1,14 @@
 /* Reset & Base Styles */
 :root {
-    --color-black: #050505;
-    --color-dark-gray: #1a1a1a;
+    --color-black: #2B3338;
+    /* Anthracite Gray */
+    --color-dark-gray: #3F4750;
     --color-light-gray: #f4f4f4;
     --color-white: #ffffff;
-    --color-accent: #000000;
-    /* Pure black accent */
-    --font-main: 'Inter', sans-serif;
+    --color-accent: #2B3338;
+    --color-orange: #FF5722;
+    /* Anthracite accent */
+    --font-main: 'Outfit', sans-serif;
     --spacing-container: 1200px;
     --transition: all 0.3s ease;
 }
@@ -69,18 +71,18 @@ img {
 
 .btn-primary {
     display: inline-block;
-    background-color: var(--color-black);
+    background-color: var(--color-orange);
     color: var(--color-white);
     padding: 14px 32px;
     font-weight: 600;
     border-radius: 4px;
     transition: var(--transition);
-    border: 2px solid var(--color-black);
+    border: 2px solid var(--color-orange);
 }
 
 .btn-primary:hover {
     background-color: var(--color-white);
-    color: var(--color-black);
+    color: var(--color-orange);
 }
 
 .btn-secondary {
@@ -196,6 +198,20 @@ img {
 
 .hero-content {
     max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hero-banner {
+    width: 80vw;
+    max-width: none;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .hero h1 {
@@ -211,12 +227,15 @@ img {
     color: #555;
     margin-bottom: 40px;
     max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-buttons {
     display: flex;
     gap: 16px;
     margin-bottom: 60px;
+    justify-content: center;
 }
 
 .hero-badges {
@@ -225,6 +244,7 @@ img {
     gap: 30px;
     padding-top: 30px;
     border-top: 1px solid #eee;
+    justify-content: center;
 }
 
 .badge {
@@ -263,6 +283,7 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    justify-content: center;
 }
 
 .service-card {
@@ -272,6 +293,7 @@ img {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
 .service-card:hover {
@@ -396,6 +418,15 @@ img {
 }
 
 /* Trust Section */
+.trust {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.trust .section-title {
+    color: var(--color-white);
+}
+
 .features-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -406,6 +437,11 @@ img {
 .feature h3 {
     font-size: 1.3rem;
     margin-bottom: 12px;
+    color: inherit;
+}
+
+.trust .feature p {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .feature p {
@@ -437,9 +473,10 @@ img {
 
 /* Footer */
 .footer {
-    background-color: var(--color-white);
+    background-color: var(--color-black);
+    color: var(--color-white);
     padding: 60px 0;
-    border-top: 1px solid #eee;
+    border-top: none;
     font-size: 0.9rem;
 }
 
@@ -455,10 +492,11 @@ img {
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: var(--color-white);
 }
 
 .footer-col p {
-    color: #666;
+    color: rgba(255, 255, 255, 0.7);
     margin-bottom: 10px;
 }
 
@@ -494,6 +532,17 @@ img {
 
     .hero-badges {
         justify-content: center;
+    }
+
+    .hero-banner {
+        width: 100vw;
+        border-radius: 0;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        max-width: none;
+        position: static;
+        transform: none;
+        left: auto;
     }
 
     .mobile-menu-btn {
