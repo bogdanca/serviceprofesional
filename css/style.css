@@ -621,3 +621,162 @@ img {
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     }
 }
+
+/* Schedule Section */
+.program-section {
+    background-color: var(--color-white);
+}
+
+.schedule-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.schedule-card {
+    background: var(--color-light-gray);
+    padding: 40px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: var(--transition);
+}
+
+.schedule-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+.highlight-card {
+    background: var(--color-black);
+    color: var(--color-white);
+    border: none;
+}
+
+.schedule-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.schedule-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.schedule-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.day-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.highlight-card .day-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.highlight-card .day-row .hours {
+    color: var(--color-orange);
+}
+
+.badge-emergency {
+    background-color: var(--color-orange);
+    color: var(--color-white) !important;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: 800;
+}
+
+.emergency-desc {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin: 10px 0 20px;
+}
+
+.schedule-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* WhatsApp Button */
+#simple-chat-button--container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 15px;
+}
+
+#simple-chat-button--button {
+    background-color: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#simple-chat-button--button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+#simple-chat-button--text {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+#simple-chat-button--container:hover #simple-chat-button--text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    #simple-chat-button--container {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    #simple-chat-button--button {
+        width: 50px;
+        height: 50px;
+    }
+
+    #simple-chat-button--button img {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    #simple-chat-button--text {
+        display: none;
+    }
+}
