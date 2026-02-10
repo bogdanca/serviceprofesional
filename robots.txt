@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://service-profesional.ro/sitemap.xml
+Sitemap: https://serviceprofesional.ro/sitemap.xml
